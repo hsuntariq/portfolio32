@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        width: 500px;
+        height: 500px;
+        background-color: red;
+        margin: auto;
+        overflow: hidden;
+      }
+
+      .square {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        animation: move 1s linear infinite;
+      }
+
+      @keyframes move {
+        0% {
+          transform: translate(0, 0) rotate(0);
+        }
+        25% {
+          transform: translate(400px, 0) rotate(90deg);
+          background-color: green;
+          border-radius: 50% 10%;
+        }
+        50% {
+          transform: translate(400px, 400px) rotate(180deg);
+          background-color: yellow;
+          border-radius: 50%;
+        }
+        75% {
+          transform: translate(0, 400px) rotate(270deg);
+          background-color: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="square"></div>
+    </div>
+  </body>
+</html>
